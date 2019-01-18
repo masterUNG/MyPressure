@@ -5,10 +5,63 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+   <!--Content-->
+    <LinearLayout
+        android:layout_margin="@dimen/m1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <!--Logo-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--Title-->
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--User-->
+        <EditText
+            android:textSize="@dimen/h2"
+            android:inputType="text"
+            android:hint="@string/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Password-->
+        <EditText
+            android:textSize="@dimen/h2"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Login-->
+        <Button
+            android:text="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--New Register-->
+        <TextView
+            android:id="@+id/txtRegister"
+            android:clickable="true"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="@dimen/m2"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:text="New Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
 
 </FrameLayout>
