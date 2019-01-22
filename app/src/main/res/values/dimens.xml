@@ -5,4 +5,5 @@
     <dimen name="h2">18sp</dimen>
     <dimen name="h3">16sp</dimen>
     <dimen name="m2">16dp</dimen>
+    <dimen name="h4">14sp</dimen>
 </resources>

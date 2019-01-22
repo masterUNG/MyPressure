@@ -11,39 +11,60 @@
         android:id="@+id/toolbarRegister"
         layout="@layout/toolbar_main" />
 
-    <!--Content-->
-    <LinearLayout
-        android:layout_margin="@dimen/m1"
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <!--Name-->
-        <EditText
-            android:textSize="@dimen/h2"
-            android:inputType="text"
-            android:hint="@string/name"
+        <!--Wallpaper-->
+        <ImageView
+            android:src="@drawable/wallpaper_blue"
+            android:scaleType="fitXY"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
-        <!--User-->
-        <EditText
-            android:textSize="@dimen/h2"
-            android:inputType="text"
-            android:hint="@string/user"
+        <!--Content-->
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="@dimen/m1"
+            android:layout_marginRight="@dimen/m1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <!--Password-->
-        <EditText
-            android:textSize="@dimen/h2"
-            android:inputType="text"
-            android:hint="@string/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <!--Name-->
+            <EditText
+                android:background="@drawable/name"
+                android:textSize="@dimen/h4"
+                android:inputType="text"
+                android:hint="@string/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--User-->
+            <EditText
+                android:background="@drawable/user"
+                android:textSize="@dimen/h4"
+                android:inputType="text"
+                android:hint="@string/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Password-->
+            <EditText
+                android:background="@drawable/password"
+                android:textSize="@dimen/h4"
+                android:inputType="text"
+                android:hint="@string/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
 
 
 </LinearLayout>

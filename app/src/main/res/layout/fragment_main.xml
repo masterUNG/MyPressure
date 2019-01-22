@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
+    <!--Wallpaper-->
+    <ImageView
+        android:src="@drawable/wallpaper"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
    <!--Content-->
     <LinearLayout
-        android:layout_margin="@dimen/m1"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="@dimen/m1"
+        android:layout_marginRight="@dimen/m1"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <!--Logo-->
         <ImageView
+            android:src="@drawable/logo"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <!--Title-->
         <TextView
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:textSize="@dimen/h1"
             android:layout_gravity="center_horizontal"
@@ -29,7 +41,8 @@
 
         <!--User-->
         <EditText
-            android:textSize="@dimen/h2"
+            android:background="@drawable/user"
+            android:textSize="@dimen/h4"
             android:inputType="text"
             android:hint="@string/user"
             android:layout_width="match_parent"
@@ -37,7 +50,8 @@
 
         <!--Password-->
         <EditText
-            android:textSize="@dimen/h2"
+            android:background="@drawable/password"
+            android:textSize="@dimen/h4"
             android:inputType="textPassword"
             android:hint="@string/password"
             android:layout_width="match_parent"
@@ -45,6 +59,9 @@
 
         <!--Login-->
         <Button
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@drawable/button"
             android:text="@string/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -64,4 +81,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>
