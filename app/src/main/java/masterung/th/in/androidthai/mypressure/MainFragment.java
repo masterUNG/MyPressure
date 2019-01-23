@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -27,8 +29,36 @@ public class MainFragment extends Fragment {
 //        Register Controller
         registerController();
 
+//        Login Controller
+        loginController();
 
     }   // Main Method
+
+    private void loginController() {
+        Button button = getView().findViewById(R.id.btnLogin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText userEditText = getView().findViewById(R.id.edtUser);
+                EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+
+                String user = userEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
+
+                MyAlert myAlert = new MyAlert(getActivity());
+
+                if (user.isEmpty() || password.isEmpty()) {
+                    myAlert.normalDialog("Have Space", "Please Fill Every Blank");
+//                    Have Space
+                } else {
+//                    No Space
+                }
+
+
+            }
+        });
+    }
 
     private void registerController() {
         TextView textView = getView().findViewById(R.id.txtRegister);
