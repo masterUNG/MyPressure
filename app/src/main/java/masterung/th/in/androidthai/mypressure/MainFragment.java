@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,6 +67,24 @@ public class MainFragment extends Fragment {
                         String json = getUserWhereUserThread.get();
 
                         Log.d("27JanV1", "json ==> " + json);
+
+                        if (json.equals("null")) {
+//                            User False
+                            myAlert.normalDialog("User False", "No " + user + " in My Database");
+                        } else {
+
+                            JSONArray jsonArray = new JSONArray(json);
+                            JSONObject jsonObject = jsonArray.getJSONObject(0);
+
+                            if (password.equals(jsonObject.getString("Password"))) {
+//                                Password True
+                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contentMainFragment, new ServiceFragment()).commit();
+                            } else {
+//                                Password False
+                                myAlert.normalDialog("Password False", "Please Try Again Password False");
+                            }
+
+                        }
 
                     } catch (Exception e) {
                         e.printStackTrace();
